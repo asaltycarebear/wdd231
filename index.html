@@ -10,14 +10,18 @@
     <!--Update--> <link rel="stylesheet" href="styles/home-large.css">
     <!--Update--> <script src="scripts/home.js" defer></script>
     <!--Keep--> <script src="scripts/getdates.js" defer></script>
-    <!--Keep--> <script src="scripts/customscripts.js" defer></script>
+    <!--Keep--> <script src="scripts/scripts.js" defer></script>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Oxanium:wght@200..800&family=Quantico&display=swap" rel="stylesheet">
 </head>
 <body>
-    <header><h1>Site Name</h1>
-        <nav>
+    <header>
+        <h1>Site Name</h1>
+
+        <button id ="menu" class="hamburger">☰</button>
+        
+        <nav id="nav-menu">
             <ul>
                 <li><a href="index.html" target="_blank" rel="noopener noreferrer">Home</a></li>
                 <li><a href="chamber.html" target="_blank" rel="noopener noreferrer">Chamber</a></li>
@@ -27,7 +31,6 @@
     </header> <!--I can move the header closing tag back to match the h1 if it fails the audit-->
 
     <main class="container">
-        
         <section class="card" id="name">
             <h1>Home</h1>
         </section>
@@ -46,11 +49,18 @@
             </div>
         </section>
 
-        <section class = "card" id="courses">
-            <h2>Web Certificate Courses</h2>
-            <div class = "courses">
-                [Content]
-            </div>
+        <section class="card" id="courses">
+        <h2>Web Certificate Courses</h2>
+
+        <div class="course-filters">
+            <button id="all">All Courses</button>
+            <button id="wdd">WDD Courses</button>
+            <button id="cse">CSE Courses</button>
+        </div>
+
+        <div class="courses"></div>
+
+        <p class="credit-total"></p>
         </section>
     </main>
     <footer>

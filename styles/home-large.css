@@ -25,6 +25,9 @@ main {
   grid-row: 3;
 }
 
+.hamburger {
+  display: none;
+}
 
 
 }
