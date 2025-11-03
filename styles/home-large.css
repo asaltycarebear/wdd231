@@ -1,0 +1,30 @@
+@media screen and (min-width: 600px)
+{
+main {
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: auto auto;
+}
+
+#name {
+  grid-column: 1 / span 3;
+  grid-row: 1;
+}
+
+#about {
+  grid-column: 1 / span 2;
+  grid-row: 2;
+}
+
+#profile {
+  grid-column: 3;
+  grid-row: 2;
+}
+
+#courses {
+  grid-column: 1 / span 3;
+  grid-row: 3;
+}
+
+
+
+}
