@@ -14,6 +14,15 @@
   padding: 0;
 }
 
+.logo-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  font-size: 2rem;
+  font-family: var(--heading-font);
+}
+
 h1, h2, h3 {
   display: flex;
   font-family: var(--heading-font);

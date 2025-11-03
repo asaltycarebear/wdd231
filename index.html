@@ -15,19 +15,22 @@
     <link href="https://fonts.googleapis.com/css2?family=Oxanium:wght@200..800&family=Quantico&display=swap" rel="stylesheet">
 </head>
 <body>
-    <header>
-        <h1>Site Name</h1>
+<header>
+    <div class="logo-container">
+        <img src="images/logo.svg" alt="Site Logo" class="site-logo">
+        <span>Garrett Stockwell</span>
+    </div>
 
-        <button id ="menu" class="hamburger">☰</button>
-        
-        <nav id="nav-menu">
-            <ul>
-                <li><a href="index.html" target="_blank" rel="noopener noreferrer">Home</a></li>
-                <li><a href="chamber.html" target="_blank" rel="noopener noreferrer">Chamber</a></li>
-                <li><a href="final.html" target="_blank" rel="noopener noreferrer">Final</a></li>
-            </ul>
-        </nav>
-    </header> <!--I can move the header closing tag back to match the h1 if it fails the audit-->
+    <button id="menu" class="hamburger" aria-label="Menu">☰</button>
+    
+    <nav id="nav-menu">
+        <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="chamber.html">Chamber</a></li>
+            <li><a href="final.html">Final</a></li>
+        </ul>
+    </nav>
+</header> <!--I can move the header closing tag back to match the h1 if it fails the audit-->
 
     <main class="container">
 
