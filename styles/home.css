@@ -92,9 +92,13 @@ main {
   border-radius: 0.25rem;
 }
 
+
 .course-filters button{
     background-color: var(--accent1-color);
     color: white;
+    font-family: var(--body-font);
+    padding: .5rem;
+    border: 2px solid white;
 }
 
 footer {
