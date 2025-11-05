@@ -102,14 +102,22 @@ main {
 }
 
 
-.course-filters button{
+.course-filters button {
     background-color: var(--accent1-color);
     color: white;
     font-family: var(--body-font);
     padding: .5rem;
     border: 2px solid white;
     font-weight: bold;
+    transition: background-color 0.3s ease, color 0.3s ease, border-color 0.3s ease;
 }
+
+.course-filters button:hover {
+    background-color: white;
+    color: var(--accent1-color);
+    border-color: var(--accent1-color);
+}
+
 
 footer {
   background-color: var(--secondary-color);
