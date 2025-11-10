@@ -1,0 +1,20 @@
+{
+    "new-member-family":{
+        "family name":"Jonses",
+        "date-moved-in":"1-01-25",
+        "number-of-records":"2",
+        "visited":true,
+        "family-member":[
+            {
+                "name": "John",
+                "gender":"M",
+                "birthday":"1-01-89"
+            },
+            {
+                "name": "Jane",
+                "gender":"F",
+                "birthday":"1-01-91"
+            }
+        ]
+    }
+}
