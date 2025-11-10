@@ -75,6 +75,10 @@ nav a:hover {
   color: var(--accent2-color);
 }
 
+nav a.active {
+    font-weight: bold;
+}
+
 main {
   max-width: 960px;
   margin: 2rem auto;
