@@ -1,0 +1,81 @@
+{
+  "members": [
+    {
+      "name": "Two Jacks Pizza",
+      "address": "80 W Center St, Provo, UT 84601",
+      "phone": "",
+      "website": "",
+      "image": "",
+      "membershipLevel": 1,
+      "description": "",
+      "hours": "",
+      "email": ""
+    },
+    {
+      "name": "Joe's Burgurs",
+      "address": "490 N Freedom Blvd Provo, UT 84601",
+      "phone": "(801) 377-5637",
+      "website": "",
+      "image": "",
+      "membershipLevel": 2,
+      "description": "",
+      "hours": "",
+      "email": ""
+    },
+    {
+      "name": "",
+      "address": "",
+      "phone": "",
+      "website": "",
+      "image": "",
+      "membershipLevel": 3,
+      "description": "",
+      "hours": "",
+      "email": ""
+    },
+    {
+      "name": "",
+      "address": "",
+      "phone": "",
+      "website": "",
+      "image": "",
+      "membershipLevel": 1,
+      "description": "",
+      "hours": "",
+      "email": ""
+    },
+    {
+      "name": "",
+      "address": "",
+      "phone": "",
+      "website": "",
+      "image": "",
+      "membershipLevel": 2,
+      "description": "",
+      "hours": "",
+      "email": ""
+    },
+    {
+      "name": "",
+      "address": "",
+      "phone": "",
+      "website": "",
+      "image": "",
+      "membershipLevel": 3,
+      "description": "",
+      "hours": "",
+      "email": ""
+    },
+    {
+      "name": "",
+      "address": "",
+      "phone": "",
+      "website": "",
+      "image": "",
+      "membershipLevel": 1,
+      "description": "",
+      "hours": "",
+      "email": ""
+    }
+  ]
+}
