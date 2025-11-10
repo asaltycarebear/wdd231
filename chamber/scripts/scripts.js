@@ -13,24 +13,23 @@ document.addEventListener("DOMContentLoaded", () => {
     });
 });
 
-// Wait until the DOM is fully loaded
 document.addEventListener("DOMContentLoaded", () => {
     const main = document.querySelector("main");
     const gridButton = document.createElement("button");
     const listButton = document.createElement("button");
     const buttonContainer = document.createElement("div");
 
-    // Create view toggle buttons
+    //toggle buttons
     gridButton.textContent = "Grid View";
     listButton.textContent = "List View";
     buttonContainer.classList.add("view-buttons");
     buttonContainer.appendChild(gridButton);
     buttonContainer.appendChild(listButton);
 
-    // Insert buttons at top of main section
+    //Insert buttons
     main.prepend(buttonContainer);
 
-    // Function to fetch and display businesses
+    //fetch and display businesses
     async function loadBusinesses() {
         try {
             const response = await fetch("data/members.json"); // path to your JSON
@@ -44,7 +43,7 @@ document.addEventListener("DOMContentLoaded", () => {
         }
     }
 
-    // Function to display businesses
+    //display businesses
     function displayBusinesses(businesses, viewType) {
         const container = document.createElement("section");
         container.classList.add("business-container", viewType);
