@@ -1,33 +1,14 @@
 @media screen and (min-width: 600px)
 {
-main {
+
+.members-container.grid {
+  display: grid;
   grid-template-columns: repeat(3, 1fr);
-  grid-template-rows: auto auto;
-}
-
-#name {
-  grid-column: 1 / span 3;
-  grid-row: 1;
-}
-
-#about {
-  grid-column: 1 / span 2;
-  grid-row: 2;
-}
-
-#profile {
-  grid-column: 3;
-  grid-row: 2;
-}
-
-#courses {
-  grid-column: 1 / span 3;
-  grid-row: 3;
+  gap: 1.5rem;
+  align-items: start;
 }
 
 .hamburger {
   display: none;
 }
-
-
 }

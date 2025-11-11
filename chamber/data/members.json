@@ -23,59 +23,49 @@
             "email": "NA"
         },
         {
-            "name": "T",
-            "address": "T",
-            "phone": "T",
-            "website": "T",
-            "image": "T",
-            "membershipLevel": 3,
-            "description": "T",
-            "hours": "T",
-            "email": "T"
+            "name": "Riverside Fitness",
+            "address": "789 Wellness Blvd, Provo, UT",
+            "phone": "801-555-2468",
+            "website": "https://riversidefitness.com",
+            "image": "images/riversidefitness.png",
+            "membershipLevel": 1,
+            "description": "Full-service gym offering personal training and group classes."
         },
         {
-            "name": "T",
-            "address": "T",
-            "phone": "T",
-            "website": "T",
-            "image": "T",
+            "name": "Summit Financial",
+            "address": "321 Commerce Dr, Provo, UT",
+            "phone": "801-555-9876",
+            "website": "https://summitfinance.com",
+            "image": "images/summitfinance.png",
             "membershipLevel": 3,
-            "description": "T",
-            "hours": "T",
-            "email": "T"
+            "description": "Expert financial planning and business consulting services."
         },
         {
-            "name": "T",
-            "address": "T",
-            "phone": "T",
-            "website": "T",
-            "image": "T",
-            "membershipLevel": 3,
-            "description": "T",
-            "hours": "T",
-            "email": "T"
+            "name": "Bloom Flower Shop",
+            "address": "654 Garden St, Provo, UT",
+            "phone": "801-555-7531",
+            "website": "https://bloomflowers.com",
+            "image": "images/bloomflowers.png",
+            "membershipLevel": 1,
+            "description": "Beautiful floral arrangements for any occasion."
         },
         {
-            "name": "T",
-            "address": "T",
-            "phone": "T",
-            "website": "T",
-            "image": "T",
-            "membershipLevel": 3,
-            "description": "T",
-            "hours": "T",
-            "email": "T"
+            "name": "Adventure Outfitters",
+            "address": "987 Trail Rd, Provo, UT",
+            "phone": "801-555-1122",
+            "website": "https://adventureoutfitters.com",
+            "image": "images/adventureoutfitters.png",
+            "membershipLevel": 2,
+            "description": "Outdoor gear and equipment rentals for Utah explorers."
         },
         {
-            "name": "T",
-            "address": "T",
-            "phone": "T",
-            "website": "T",
-            "image": "T",
+            "name": "Provo Builders Inc.",
+            "address": "159 Industry Ln, Provo, UT",
+            "phone": "801-555-3344",
+            "website": "https://provobuilders.com",
+            "image": "images/provobuilders.png",
             "membershipLevel": 3,
-            "description": "T",
-            "hours": "T",
-            "email": "T"
+            "description": "Trusted construction and renovation specialists."
         }
     ]
 }
