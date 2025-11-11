@@ -38,6 +38,8 @@ function displayMembers(members) {
             <p><strong>Phone:</strong> ${member.phone}</p>
             <p><a href="${member.website}" target="_blank">Visit Website</a></p>
             <p><strong>Membership Level:</strong> ${member.membershipLevel}</p>
+            <p><strong>Hours:</strong> ${member.hours}</p>
+            <p><strong>Email:</strong> ${member.email}</p>
             <p>${member.description}</p>
         `;
 
@@ -48,7 +50,10 @@ function displayMembers(members) {
 }
 
 function equalizeCardHeights() {
-    const cards = document.querySelectorAll(".members-container .card");
+    const container = document.querySelector(".members-container");
+    if (!container || !container.classList.contains("grid")) return;
+
+    const cards = document.querySelectorAll(".members-container.grid .card");
     let maxHeight = 0;
 
     cards.forEach(card => card.style.height = "auto");
@@ -64,15 +69,21 @@ function equalizeCardHeights() {
     });
 }
 
-
 gridButton.addEventListener("click", () => {
-    document.querySelector(".members-container").classList.add("grid");
-    document.querySelector(".members-container").classList.remove("list");
+    const container = document.querySelector(".members-container");
+    container.classList.add("grid");
+    container.classList.remove("list");
+    equalizeCardHeights();
 });
 
 listButton.addEventListener("click", () => {
-    document.querySelector(".members-container").classList.add("list");
-    document.querySelector(".members-container").classList.remove("grid");
+    const container = document.querySelector(".members-container");
+    container.classList.add("list");
+    container.classList.remove("grid");
+    const cards = container.querySelectorAll(".card");
+    cards.forEach(card => card.style.height = "auto");
 });
+
+window.addEventListener("resize", equalizeCardHeights);
 
 getMembers();

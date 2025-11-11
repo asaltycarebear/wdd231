@@ -16,56 +16,66 @@
             "address": "490 N Freedom Blvd Provo, UT 84601",
             "phone": "(801) 377-5637",
             "website": "NA",
-            "image": "https://github.com/asaltycarebear/wdd231/blob/main/chamber/images/Joes.webp",
+            "image": "https://github.com/asaltycarebear/wdd231/blob/main/chamber/images/Joes.webp?raw=true",
             "membershipLevel": 1,
-            "description": "",
+            "description": "Burgers from long past...we miss you.",
             "hours": "11 AM - 10PM",
             "email": "NA"
         },
         {
-            "name": "Riverside Fitness",
-            "address": "789 Wellness Blvd, Provo, UT",
-            "phone": "801-555-2468",
-            "website": "https://riversidefitness.com",
-            "image": "images/riversidefitness.png",
+            "name": "Brick Oven",
+            "address": "111 E 800 N, Provo, UT 84606",
+            "phone": "(801) 374-8800",
+            "website": "https://brickovenrestaurants.com/",
+            "image": "https://static.spotapps.co/website_images/ab_websites/119111_website/logo.png",
             "membershipLevel": 1,
-            "description": "Full-service gym offering personal training and group classes."
+            "description": "Flagship of a pizzeria chain serving all-you-can-eat pasta, soup & salad, plus signature root beer.",
+            "hours": "11 AM - 10PM",
+            "email": "NA"
         },
         {
-            "name": "Summit Financial",
-            "address": "321 Commerce Dr, Provo, UT",
-            "phone": "801-555-9876",
-            "website": "https://summitfinance.com",
-            "image": "images/summitfinance.png",
+            "name": "Lowes Xtreme Air Sports",
+            "address": "1111 W 100 S, Provo, UT 84601",
+            "phone": "(801) 374-5867",
+            "website": "https://www.lowesairsports.com/",
+            "image": "https://static.wixstatic.com/media/db4fe8_03d4f19ec263482d80f3800a1b57ce4b~mv2.png/v1/fill/w_528,h_123,al_c,q_85,usm_0.66_1.00_0.01,enc_avif,quality_auto/Lowes_Logo_2%20(2)-1.png",
             "membershipLevel": 3,
-            "description": "Expert financial planning and business consulting services."
+            "description": "The original trampoline arena in Utah",
+            "hours": "11 AM - 10PM",
+            "email": "NA"
         },
         {
-            "name": "Bloom Flower Shop",
-            "address": "654 Garden St, Provo, UT",
-            "phone": "801-555-7531",
-            "website": "https://bloomflowers.com",
-            "image": "images/bloomflowers.png",
+            "name": "Provo Beach",
+            "address": "4801 N University Ave #210, Provo, UT 84604",
+            "phone": "(801) 224-5001",
+            "website": "https://www.provobeach.com/",
+            "image": "https://www.provobeach.com/wp-content/uploads/2022/05/Provo-Beach-Logo-white.png",
             "membershipLevel": 1,
-            "description": "Beautiful floral arrangements for any occasion."
+            "description": "Beach day in the mountains",
+            "hours": "11 AM - 9PM",
+            "email": "NA"
         },
         {
-            "name": "Adventure Outfitters",
-            "address": "987 Trail Rd, Provo, UT",
-            "phone": "801-555-1122",
-            "website": "https://adventureoutfitters.com",
-            "image": "images/adventureoutfitters.png",
+            "name": "BYU Creamery on Ninth",
+            "address": "1209 900 E, Provo, UT 84604",
+            "phone": "(801) 422-2663",
+            "website": "https://dining.byu.edu/creamery-on-ninth",
+            "image": "data:image/png;base64,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",
             "membershipLevel": 2,
-            "description": "Outdoor gear and equipment rentals for Utah explorers."
+            "description": "Ice Cream Flavors​​ From Graham Canyon to Cookies and Cream, from classic Vanilla to Mint Chocolate Chip, the Creameries have it all!",
+            "hours": "11 AM - 9PM",
+            "email": "NA"
         },
         {
-            "name": "Provo Builders Inc.",
-            "address": "159 Industry Ln, Provo, UT",
-            "phone": "801-555-3344",
-            "website": "https://provobuilders.com",
-            "image": "images/provobuilders.png",
+            "name": "Fat Cats Provo",
+            "address": "1200 N University Ave, Provo, UT 84604",
+            "phone": "(801) 373-1863",
+            "website": "https://www.fatcatsfun.com/provo",
+            "image": "https://www.fatcatsfun.com/media/osrdlaw5/new-header-logo_24th-august-2022.svg",
             "membershipLevel": 3,
-            "description": "Trusted construction and renovation specialists."
+            "description": "FatCats Provo is an entertainment venue offering a variety of activities including bowling, an arcade, and a large food court.",
+            "hours": "11 AM - 9PM",
+            "email": "NA"
         }
     ]
 }
