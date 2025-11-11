@@ -128,32 +128,24 @@ main {
   border-color: var(--accent1-color);
 }
 
+/* space after .list and before .card is required...Not sure why but okay.*/
 .members-container.list {
   display: flex;
   flex-direction: column;
   gap: 1rem;
 }
 
-.members-container.card {
-  background-color: var(--accent3-color);
-  border-radius: 1rem;
-  padding: 1rem;
-  border: 2px solid #999;
-  text-align: center;
-}
-
-.members-container.list.card {
-  height: auto;
+.members-container.list .card {
   display: flex;
   align-items: center;
   text-align: left;
   gap: 1rem;
+  height: auto;
 }
 
-.members-container.list.card img {
-  width: 100px;
-  height: auto;
-  border-radius: 0.25rem;
+
+.members-container.list .card img {
+  display: none;
 }
 
 .course-filters button {
