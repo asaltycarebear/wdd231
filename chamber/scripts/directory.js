@@ -27,9 +27,17 @@ function displayMembers(members) {
     const container = document.createElement("div");
     container.classList.add("members-container");
 
+    const levelNames = {
+        1: "Bronze",
+        2: "Silver",
+        3: "Gold"
+    };
+
     members.forEach(member => {
         const card = document.createElement("section");
         card.classList.add("card");
+
+        const levelText = levelNames[member.membershipLevel] || member.membershipLevel;
 
         card.innerHTML = `
             <img src="${member.image}" alt="${member.name} logo">
@@ -37,7 +45,7 @@ function displayMembers(members) {
             <p><strong>Address:</strong> ${member.address}</p>
             <p><strong>Phone:</strong> ${member.phone}</p>
             <p><a href="${member.website}" target="_blank">Visit Website</a></p>
-            <p><strong>Membership Level:</strong> ${member.membershipLevel}</p>
+            <p><strong>Membership Level:</strong> ${levelText}</p>
             <p><strong>Hours:</strong> ${member.hours}</p>
             <p><strong>Email:</strong> ${member.email}</p>
             <p>${member.description}</p>

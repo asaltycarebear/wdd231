@@ -8,6 +8,12 @@
   align-items: start;
 }
 
+.homegroup {
+  display: grid;
+  grid-template-columns: 1fr 0.5fr 0.5fr;
+  gap: 1.5rem;
+}
+
 .hamburger {
   display: none;
 }

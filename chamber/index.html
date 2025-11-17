@@ -4,10 +4,10 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="author" content="Garrett Stockwell">
-    <!--Update--> <meta name="description" content="A list of Provo business and other organizations that belong to the chamber of commerce.">
+    <!--Update--> <meta name="description" content="A home page with a snapshot of the most relevent information aobut the chamber of commerce in Provo UT, and the area itself.">
     <!--Update--> <title>WDD 231: Chamber of commerce Directory page.</title>
-    <!--Update (facebook)--><meta property="og:title" content="WDD 231: Chamber of Commerce Directory page">
-    <!--Update (facebook)--><meta property="og:description" content="The local buisness directory for the Chamber of Commerce for Provo UT">
+    <!--Update (facebook)--><meta property="og:title" content="WDD 231: Chamber of Commerce Home page">
+    <!--Update (facebook)--><meta property="og:description" content="The Home page for the Chamber of Commerce for Provo UT">
     <!--Update (facebook)--><meta property="og:image" content="https://asaltycarebear.github.io/wdd231/chamber/images/provoflag.png">
     <!--Update (facebook)--><meta property="og:url" content="https://asaltycarebear.github.io/wdd231/chamber/directory.html">
     <!--Keep--><meta property="og:type" content="website">
@@ -15,6 +15,7 @@
     <!--Update--> <link rel="stylesheet" href="styles/styles-large.css">
     <!--Keep--> <script src="scripts/getdates.js" defer></script>
     <!--Keep--> <script src="scripts/scripts.js" defer></script>
+    <script src="scripts/index.js" defer></script>
     <link rel="icon" href="images/favicon.ico">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -31,7 +32,7 @@
     
     <nav id="nav-menu">
         <ul>
-            <li><a href="home.html">Home</a></li>
+            <li><a href="index.html">Home</a></li>
             <li><a href="discover.html">Discover</a></li>
             <li><a href="directory.html">Directory</a></li>
             <li><a href="join.html">Join</a></li>
@@ -39,7 +40,33 @@
     </nav>
 </header>
     <main>
-        <h1>Template</h1>
+        <section class="hero">
+            <img src="" alt="Provo Landscape">
+            <button>[call to action]</button>
+        </section>
+        
+        <h1>Home</h1>
+        
+        <section class="homegroup">
+            <section class="card" id="events">
+                <h2>Events</h2>
+                <p>[content]</p>
+            </section>
+
+            <div class="card" id="current">
+                <h2>Current Weather</h2>
+                <p>[content]</p>
+            </div>
+
+            <div class="card" id="forecast">
+                <h2>Weather Forecast</h2>
+                <p>[content]</p>
+            </div>
+        </section>
+        
+        <section class="members-container" id="spotlight-container">
+
+        </section>
     </main>
     <footer>
         <div><h4>Provo UT Chamber of Commerce</h4></div>
