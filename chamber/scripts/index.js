@@ -64,17 +64,17 @@ function displayForecast(data) {
 
 async function loadSpotlights() {
     const response = await fetch("data/members.json");
-    const members = await response.json();
+    const data = await response.json();
+    const members = data.members;
 
-    // Only Gold or Silver
     const premiumMembers = members.filter(m => m.membershipLevel === 2 || m.membershipLevel === 3);
 
-    // Shuffle & pick 3
     const selected = premiumMembers
         .sort(() => Math.random() - 0.5)
         .slice(0, 3);
 
     displaySpotlights(selected);
+    equalizeSpotlightHeights();
 }
 
 function displaySpotlights(members) {
@@ -84,7 +84,7 @@ function displaySpotlights(members) {
         3: "Gold"
     };
 
-    spotlightContainer.innerHTML = ""; // clear existing
+    spotlightContainer.innerHTML = "";
 
     members.forEach(member => {
         const card = document.createElement("section");
@@ -103,6 +103,43 @@ function displaySpotlights(members) {
     });
 }
 
+function equalizeSpotlightHeights() {
+    const container = document.querySelector("#spotlight-container");
+    if (!container) return;
+
+    const cards = container.querySelectorAll(".card");
+    if (cards.length === 0) return;
+
+    cards.forEach(card => card.style.height = "auto");
+
+    const images = container.querySelectorAll("img");
+    let loadedCount = 0;
+
+    images.forEach(img => {
+        if (img.complete) {
+            loadedCount++;
+            if (loadedCount === images.length) setHeights();
+        } else {
+            img.onload = img.onerror = () => {
+                loadedCount++;
+                if (loadedCount === images.length) setHeights();
+            };
+        }
+    });
+
+    function setHeights() {
+        let maxHeight = 0;
+
+        cards.forEach(card => {
+            const h = card.offsetHeight;
+            if (h > maxHeight) maxHeight = h;
+        });
+
+        cards.forEach(card => {
+            card.style.height = `${maxHeight}px`;
+        });
+    }
+}
 
 getCurrentWeather();
 getForecast();
