@@ -15,6 +15,7 @@
     <!--Update--> <link rel="stylesheet" href="styles/styles-large.css">
     <!--Keep--> <script src="scripts/getdates.js" defer></script>
     <!--Keep--> <script src="scripts/scripts.js" defer></script>
+    <script src="scripts/join.js" defer></script>
     <link rel="icon" href="images/favicon.ico">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -22,24 +23,177 @@
 </head>
 <body>
     <header>
-    <div class="logo-container">
-        <img src="images/provoflag.svg" alt="Site Logo" class="site-logo">
-        <span>Provo Chamber of Commerce</span>
-    </div>
+        <div class="logo-container">
+            <img src="images/provoflag.svg" alt="Site Logo" class="site-logo">
+            <span>Provo Chamber of Commerce</span>
+        </div>
 
-    <button id="menu" class="hamburger" aria-label="Menu">☰</button>
-    
-    <nav id="nav-menu">
-        <ul>
-            <li><a href="index.html">Home</a></li>
-            <li><a href="discover.html">Discover</a></li>
-            <li><a href="directory.html">Directory</a></li>
-            <li><a href="join.html">Join</a></li>
-        </ul>
-    </nav>
-</header>
-    <main>
-        <h1>Template</h1>
+        <button id="menu" class="hamburger" aria-label="Menu">☰</button>
+        
+        <nav id="nav-menu">
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="discover.html">Discover</a></li>
+                <li><a href="directory.html">Directory</a></li>
+                <li><a href="join.html">Join</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main class="joinmain">
+
+        <h1>Join the Chamber!</h1>
+
+        <div class="join-layout">
+            <form method="get" action="thankyou.html">
+                <label for="fname">First Name</label>
+                <input 
+                    type="text"
+                    id="fname"
+                    name="first-name"
+                    title="Applicant's First Name"
+                    placeholder="First Name"
+                    autocomplete="given-name"
+                    required
+                >
+
+                <label for="lname">Last Name</label>
+                <input 
+                    type="text"
+                    id="lname"
+                    name="last-name"
+                    title="Applicant's Last Name"
+                    placeholder="Last Name"
+                    autocomplete="family-name"
+                    required
+                >
+
+                <label for="title">Organizational Title</label>
+                <input
+                    type="text"
+                    id="title"
+                    name="organization-title"
+                    title="Applicant's Organizational Title"
+                    placeholder="Your organizational title"
+                    autocomplete="organization-title"
+                >
+
+                <label for="email">Email Address</label>
+                <input
+                    type="email"
+                    id="email"
+                    name="email"
+                    title="Email Address"
+                    placeholder="example@email.com"
+                    autocomplete="email"
+                    required
+                >
+
+                <label for="mobile">Mobile Phone Number</label>
+                <input
+                    type="tel"
+                    id="mobile"
+                    name="mobile"
+                    title="Mobile Phone Number"
+                    placeholder="(###) ###-#### (US Only) "
+                    autocomplete="tel"
+                    required
+                >
+
+                <label for="org">Organization Name</label>
+                <input
+                    type="text"
+                    id="org"
+                    name="organization"
+                    title="Business or Organization Name"
+                    placeholder="Your organazation name here!"
+                    autocomplete="organization"
+                    required
+                >
+
+                <label for="membership">Membership Level</label>
+                <select 
+                    id="membership"
+                    name="membership-level"
+                    title="Select Membership Level"
+                    required
+                >
+                    <option value="">-- Select Membership Level --</option>
+                    <option value="np">NP Membership (Nonprofit)</option>
+                    <option value="bronze">Bronze Membership</option>
+                    <option value="silver">Silver Membership</option>
+                    <option value="gold">Gold Membership</option>
+                </select>
+
+                <label for="description">Organization Description</label>
+                <textarea
+                    id="description"
+                    name="organization-description"
+                    title="Business or Organization Description"
+                    placeholder="Describe your organization..."
+                ></textarea>
+
+                <input
+                    type="hidden"
+                    id="timestamp"
+                    name="timestamp"
+                    value=""
+                >
+
+                <input type="submit" value="Submit Application">
+
+            </form>
+           
+            <section class="membership-cards">
+
+                <div class="card">
+                    <h3>NP Membership</h3>
+                    <a href="#" class="open-modal" data-modal="np-modal">View Benefits</a>
+                </div>
+
+                <div class="card">
+                    <h3>Bronze Membership</h3>
+                    <a href="#" class="open-modal" data-modal="bronze-modal">View Benefits</a>
+                </div>
+
+                <div class="card">
+                    <h3>Silver Membership</h3>
+                    <a href="#" class="open-modal" data-modal="silver-modal">View Benefits</a>
+                </div>
+
+                <div class="card">
+                    <h3>Gold Membership</h3>
+                    <a href="#" class="open-modal" data-modal="gold-modal">View Benefits</a>
+                </div>
+
+            </section>
+
+            <dialog id="np-modal" class="modal">
+                <h2>NP Membership Benefits</h2>
+                <p>[Content]</p>
+                <button class="close-modal">Close</button>
+            </dialog>
+
+            <dialog id="bronze-modal" class="modal">
+                <h2>Bronze Membership Benefits</h2>
+                <p>[Content]</p>
+                <button class="close-modal">Close</button>
+            </dialog>
+
+            <dialog id="silver-modal" class="modal">
+                <h2>Silver Membership Benefits</h2>
+                <p>[Content]</p>
+                <button class="close-modal">Close</button>
+            </dialog>
+
+            <dialog id="gold-modal" class="modal">
+                <h2>Gold Membership Benefits</h2>
+                <p>[Content]</p>
+                <button class="close-modal">Close</button>
+            </dialog>
+
+        </div>
+
     </main>
     <footer>
         <div><h4>Provo UT Chamber of Commerce</h4></div>

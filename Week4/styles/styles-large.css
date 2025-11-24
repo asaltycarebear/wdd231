@@ -1,0 +1,27 @@
+@media screen and (min-width: 600px)
+{
+
+.members-container.grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1.5rem;
+  align-items: start;
+}
+
+#spotlight-container {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1.5rem;
+  align-items: start;
+}
+
+.homegroup {
+  display: grid;
+  grid-template-columns: 1fr 0.5fr 0.5fr;
+  gap: 1.5rem;
+}
+
+.hamburger {
+  display: none;
+}
+}

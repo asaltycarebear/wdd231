@@ -134,6 +134,33 @@ footer {
   border-radius: 1rem;
 }
 
+#course-details {
+  position: fixed;       /* keeps it in place even when scrolling */
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%); 
+  width: 20%;
+  height: 20%;
+  background-color: var(--secondary-color);
+  color: white;
+  border: 5px white;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.25);
+}
+
+::backdrop {
+  background-color: var(--accent3-color / 50%);
+}
+
+#course-details button {
+  border: 2px white;
+  border-radius: .25rem;
+  padding: .5rem;
+  text-align: center;
+  position: relative;
+  left: 80%;
+  top: 5%;
+}
+
 /* Mobile view */
 
 @media (max-width: 599px) {

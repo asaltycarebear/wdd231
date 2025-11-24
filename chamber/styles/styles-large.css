@@ -1,27 +1,47 @@
 @media screen and (min-width: 600px)
 {
+  .members-container.grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1.5rem;
+    align-items: start;
+  }
 
-.members-container.grid {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  gap: 1.5rem;
-  align-items: start;
-}
+  #spotlight-container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1.5rem;
+    align-items: start;
+  }
 
-#spotlight-container {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  gap: 1.5rem;
-  align-items: start;
-}
+  .homegroup {
+    display: grid;
+    grid-template-columns: 1fr 0.5fr 0.5fr;
+    gap: 1.5rem;
+  }
 
-.homegroup {
-  display: grid;
-  grid-template-columns: 1fr 0.5fr 0.5fr;
-  gap: 1.5rem;
-}
+  .hamburger {
+    display: none;
+  }
+  .joinmain .join-layout {
+    display: grid;
+    grid-template-columns: 3fr 1fr;
+    gap: 2rem;
+    align-items: start;
+  }
 
-.hamburger {
-  display: none;
-}
+  .joinmain .membership-cards {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 1rem;
+    position: sticky;
+  }
+
+  form {
+    grid-template-columns: 1fr 2fr;
+  }
+
+  form label {
+    text-align: right;
+  }
 }

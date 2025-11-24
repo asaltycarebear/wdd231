@@ -40,6 +40,7 @@ async function getForecast() {
     displayForecast(data);
 }
 
+
 function displayForecast(data) {
     let noonForecasts = data.list.filter(entry => entry.dt_txt.includes("12:00:00"));
 
@@ -77,6 +78,7 @@ async function loadSpotlights() {
     equalizeSpotlightHeights();
 }
 
+
 function displaySpotlights(members) {
     const levelNames = {
         1: "Bronze",
@@ -102,6 +104,7 @@ function displaySpotlights(members) {
         spotlightContainer.appendChild(card);
     });
 }
+
 
 function equalizeSpotlightHeights() {
     const container = document.querySelector("#spotlight-container");
