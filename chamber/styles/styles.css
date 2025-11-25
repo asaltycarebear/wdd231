@@ -314,23 +314,6 @@ form input[type="submit"] {
     width: 100%;
 }
 
-.joinmain .membership-cards .card {
-    background: var(--accent3-color);
-    padding: 1rem;
-    border: 2px solid black;
-    border-radius: 8px;
-    box-shadow: 0 2px 6px rgba(0,0,0,0.1);
-    text-align: center;
-}
-
-.joinmain .membership-cards .card a {
-    margin-top: 0.5rem;
-    display: inline-block;
-    text-decoration: underline;
-    cursor: pointer;
-    color: var(--secondary-color);
-}
-
 .joinmain .modal {
     padding: 2rem;
     border: none;
@@ -397,11 +380,20 @@ form input[type="submit"] {
 .joinmain .membership-cards .card {
     background: var(--accent3-color);
     padding: 1rem;
+    border: 2px solid black;
     border-radius: 8px;
     box-shadow: 0 2px 6px rgba(0,0,0,0.1);
     text-align: center;
     opacity: 0;
     animation: cardFadeIn 0.8s ease-out forwards;
+}
+
+.joinmain .membership-cards .card a {
+    margin-top: 0.5rem;
+    display: inline-block;
+    text-decoration: underline;
+    cursor: pointer;
+    color: var(--secondary-color);
 }
 
 .joinmain .membership-cards .card:nth-child(2) {
