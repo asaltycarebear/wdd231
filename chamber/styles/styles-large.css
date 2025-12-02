@@ -1,47 +1,14 @@
-@media screen and (min-width: 600px)
-{
-  .members-container.grid {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
+@media (min-width: 1025px) {
+  .cards-grid {
+    grid-template-columns: repeat(4, 1fr);
     gap: 1.5rem;
-    align-items: start;
+    grid-template-areas:
+      "c1 c2 c3 c4"
+      "c5 c6 c7 c8";
   }
 
-  #spotlight-container {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    gap: 1.5rem;
-    align-items: start;
-  }
-
-  .homegroup {
-    display: grid;
-    grid-template-columns: 1fr 0.5fr 0.5fr;
-    gap: 1.5rem;
-  }
-
-  .hamburger {
-    display: none;
-  }
-  .joinmain .join-layout {
-    display: grid;
-    grid-template-columns: 3fr 1fr;
-    gap: 2rem;
-    align-items: start;
-  }
-
-  .joinmain .membership-cards {
-    display: grid;
-    grid-template-columns: 1fr;
-    gap: 1rem;
-    position: sticky;
-  }
-
-  form {
-    grid-template-columns: 1fr 2fr;
-  }
-
-  form label {
-    text-align: right;
+  .cards-grid .card img:hover {
+    transform: scale(1.06);
+    filter: contrast(1.05) saturate(1.05) drop-shadow(0 6px 14px rgba(0,0,0,0.12));
   }
 }

@@ -408,8 +408,78 @@ form input[type="submit"] {
     animation-delay: 0.75s;
 }
 
+.cards-grid {
+  display: grid;
+  gap: 1rem;
+  margin: 1.5rem auto;
+  max-width: 1100px;
+  padding: 0 1rem;
+}
+
+.cards-grid {
+  grid-template-columns: 1fr;
+  grid-template-areas:
+    "c1"
+    "c2"
+    "c3"
+    "c4"
+    "c5"
+    "c6"
+    "c7"
+    "c8";
+}
+
+.card.c1 { grid-area: c1; }
+.card.c2 { grid-area: c2; }
+.card.c3 { grid-area: c3; }
+.card.c4 { grid-area: c4; }
+.card.c5 { grid-area: c5; }
+.card.c6 { grid-area: c6; }
+.card.c7 { grid-area: c7; }
+.card.c8 { grid-area: c8; }
+
+.cards-grid .card {
+  padding: 1rem;
+  background: var(--accent3-color);
+  border-radius: 0.75rem;
+  border: 2px solid #999;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.08);
+  text-align: left;
+  display: grid;
+  gap: 0.5rem;
+  align-items: start;
+}
+
+.cards-grid .card figure {
+  margin: 0;
+}
+.cards-grid .card img {
+  width: 100%;
+  max-width: 300px;
+  height: auto;
+  display: block;
+  border-radius: 6px;
+  justify-self: center;
+  transition: transform 0.25s ease, filter 0.25s ease;
+}
+
+.cards-grid .card address {
+  font-style: normal;
+  color: var(--secondary-color);
+}
+.cards-grid .card .learn-more {
+  justify-self: start;
+  margin-top: 0.5rem;
+  background: var(--accent1-color);
+  color: white;
+  border: none;
+  padding: 0.5rem 1rem;
+  border-radius: 0.5rem;
+  cursor: pointer;
+}
+
 /* Mobile view */
-@media (max-width: 599px) {
+@media (max-width: 640px) {
   nav ul {
 
     list-style: none; /*This makes it so there are no bullet points*/
@@ -434,9 +504,8 @@ form input[type="submit"] {
   }
 
   nav ul li a {
-    text-decoration: none; /*Keep, this removes the underlines! Dont forget*/
+    text-decoration: none; 
     color: white;
-    /* font-weight: bold; */ /*Don't need? butt keep in case*/
   }
 
   #nav-menu {
@@ -473,5 +542,9 @@ form input[type="submit"] {
     display: grid;
     grid-template-columns: 1fr;
     gap: 1rem;
+  }
+
+  .cards-grid .card img {
+    transition: none;
   }
 }

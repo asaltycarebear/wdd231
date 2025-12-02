@@ -1,0 +1,68 @@
+@media screen and (min-width: 641px)
+{
+  .members-container.grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1.5rem;
+    align-items: start;
+  }
+
+  #spotlight-container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1.5rem;
+    align-items: start;
+  }
+
+  .homegroup {
+    display: grid;
+    grid-template-columns: 1fr 0.5fr 0.5fr;
+    gap: 1.5rem;
+  }
+
+  .hamburger {
+    display: none;
+  }
+  .joinmain .join-layout {
+    display: grid;
+    grid-template-columns: 3fr 1fr;
+    gap: 2rem;
+    align-items: start;
+  }
+
+  .joinmain .membership-cards {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 1rem;
+    position: sticky;
+  }
+
+  form {
+    grid-template-columns: 1fr 2fr;
+  }
+
+  form label {
+    text-align: right;
+  }
+
+  .cards-grid {
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1.25rem;
+    grid-template-areas:
+      "c1 c2 c3"
+      "c4 c5 c6"
+      "c7 c8 c8";
+  }
+
+  .cards-grid .card img:hover {
+    transform: scale(1.04);
+    filter: contrast(1.02) saturate(1.03);
+  }
+
+
+  .cards-grid .card img {
+    max-width: 300px;
+    width: 100%;
+    height: auto;
+  }
+}

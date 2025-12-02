@@ -4,17 +4,18 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="author" content="Garrett Stockwell">
-    <!--Update--> <meta name="description" content="A list of Provo business and other organizations that belong to the chamber of commerce.">
-    <!--Update--> <title>WDD 231: Chamber of commerce Directory page.</title>
-    <!--Update (facebook)--><meta property="og:title" content="WDD 231: Chamber of Commerce Directory page">
-    <!--Update (facebook)--><meta property="og:description" content="The local buisness directory for the Chamber of Commerce for Provo UT">
+    <!--Update--> <meta name="description" content="Discover beautiful Provo: local attractions, photos and details.">
+    <!--Update--> <title>WDD 231: Discover: Provo Chamber</title>
+    <!--Update (facebook)--><meta property="og:title" content="WDD 231: Discover: Provo Chamber">
+    <!--Update (facebook)--><meta property="og:description" content="Discover beautiful Provo: local attractions, photos and details.">
     <!--Update (facebook)--><meta property="og:image" content="https://asaltycarebear.github.io/wdd231/chamber/images/provoflag.png">
     <!--Update (facebook)--><meta property="og:url" content="https://asaltycarebear.github.io/wdd231/chamber/directory.html">
     <!--Keep--><meta property="og:type" content="website">
     <!--Update--> <link rel="stylesheet" href="styles/styles.css">
+    <link rel="stylesheet" href="styles/styles-medium.css">
     <!--Update--> <link rel="stylesheet" href="styles/styles-large.css">
+    <!--Update--> <script type="module" src="scripts/discover.js"></script>
     <!--Keep--> <script src="scripts/getdates.js" defer></script>
-    <!--Keep--> <script src="scripts/scripts.js" defer></script>
     <link rel="icon" href="images/favicon.ico">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -22,25 +23,31 @@
 </head>
 <body>
     <header>
-    <div class="logo-container">
-        <img src="images/provoflag.svg" alt="Site Logo" class="site-logo">
-        <span>Provo Chamber of Commerce</span>
-    </div>
+        <div class="logo-container">
+            <img src="images/provoflag.svg" alt="Site Logo" class="site-logo">
+            <span>Provo Chamber of Commerce</span>
+        </div>
 
-    <button id="menu" class="hamburger" aria-label="Menu">☰</button>
-    
-    <nav id="nav-menu">
-        <ul>
-            <li><a href="index.html">Home</a></li>
-            <li><a href="discover.html">Discover</a></li>
-            <li><a href="directory.html">Directory</a></li>
-            <li><a href="join.html">Join</a></li>
-        </ul>
-    </nav>
-</header>
+        <button id="menu" class="hamburger" aria-label="Menu">☰</button>
+        
+        <nav id="nav-menu">
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="discover.html">Discover</a></li>
+                <li><a href="directory.html">Directory</a></li>
+                <li><a href="join.html">Join</a></li>
+            </ul>
+        </nav>
+    </header>
+
     <main>
-        <h1>Template</h1>
+        <h1>Discover beautiful Provo</h1>
+
+        <section id="visit-message" role="status" aria-live="polite" class="visit-msg"></section>
+
+        <section id="cards-grid" class="cards-grid" aria-label="Attractions list"></section>
     </main>
+    
     <footer>
         <div><h4>Provo UT Chamber of Commerce</h4></div>
         <div>2696 N University Ave</div>
