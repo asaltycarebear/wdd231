@@ -1,7 +1,7 @@
 :root {
   --primary-color: rgb(203, 185, 168);
   --secondary-color: rgb(8, 69, 95);
-  --accent1-color: rgb(20, 92, 158);
+  --accent1-color: rgb(8, 86, 158);
   --accent2-color: rgb(31, 39, 27);
   --accent3-color: rgb(236, 207, 195);
   --heading-font: "Quantico", sans-serif;
@@ -38,7 +38,7 @@ nav {
 
 body {
   font-family: var(--body-font);
-  background-color: #fff;
+  background-color: white;
   color: var(--accent2-color);
   line-height: 1.6;
 }
@@ -470,7 +470,7 @@ form input[type="submit"] {
 .cards-grid .card .learn-more {
   justify-self: start;
   margin-top: 0.5rem;
-  background: var(--accent1-color);
+  background: var(--secondary-color);
   color: white;
   border: none;
   padding: 0.5rem 1rem;
@@ -505,7 +505,6 @@ form input[type="submit"] {
 
   nav ul li a {
     text-decoration: none; 
-    color: white;
   }
 
   #nav-menu {
