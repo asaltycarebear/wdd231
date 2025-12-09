@@ -16,11 +16,11 @@
     
     <!--Update--> <link rel="stylesheet" href="styles/styles.css">
     <!--Update--> <link rel="stylesheet" href="styles/styles-large.css">
-    <!--Update (page css goes here)--><link rel="stylesheet" href="styles/index.css" defer>
+    <!--Update (page css goes here)--><link rel="stylesheet" href="styles/summary.css" defer>
     
     <!--Keep--> <script src="scripts/getdates.js" defer></script>
     <!--Keep--> <script src="scripts/scripts.js" defer></script>
-    <!--Update (page script goes here)--> <script src="scripts/index.js" defer></script>
+    <!--Update (page script goes here)--> <script src="scripts/summary.js" defer></script>
 
     <link rel="icon" href="images/favicon.ico">
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -41,20 +41,35 @@
             </ul>
         </nav>
     </header>
+    
     <main>
-        <div class="hero">
-            <section>
-                <h2>Stockwell Inventory</h2>
-            </section>
-            <img class="largeHero" src="images/hero.webp.webp" alt="A large, clean warehouse racking stock photo" loading="lazy">
-            <img class="heroMobile" src="images/heroMobile.webp" alt="A modern warehouse example" loading="lazy">
+        <div class="table-container">
+            <table class="stocksummary" id="stocksummary">
+                <tr>
+                    <th class="lpn">LPN</th> <!--LPN is short for Licence Plate Number-->
+                    <th class="sku">SKU</th>
+                    <th class="location">Location</th>
+                    <th class="quantity">quantity</th>
+                    <th class="Batch Lot">Batch Lot</th>
+                    <th class="product-version">Product Version</th>
+                    <th class="description">Description</th>
+                    <th class="make">Make</th>
+                    <th class="model">Model</th>
+                    <th class="weight">Weight</th>
+                    <th class="length">Length</th>
+                    <th class="width">Width</th>
+                    <th class="height">Height</th>
+                    <th class="cost-per-item">Cost per Item</th>
+                    <th class="item-sale-price">Item Sale Price</th>
+                </tr>
+                <!-- table rows here -->
+            </table>
         </div>
-        <div class="about">
-            <p>Do you ever wish that your "spreadsheet" sized company could have the power and control over your internal logistics like a million square foot warehouse? Great news, you can. And we won't even make you switch to a database (depending on your needs). At Stockwell Inventory, we have over 10 years of warehouse inventory management, with both the programming knowledge, and spreadsheet expertise to help your company lower your error rate, improve your reporting, and give a serious boost to your floor team member's quality of life.</p>
-            <p>If you are a company who tracks most of your inventory on spreadsheets we have the perfect answer to your tracking needs, and it can all be done with CSV files. With our highly modular system, we can craft the perfect table to fit your already existing spreadsheet, or you can take a look at our templates to find your perfect fit. In the meantime, we have an example of the Receiving Tool, and an example of how the Stock History CSV gets created. Use the links in the header to try it out! We look forward to hearing from you!</p>
-            <p>contact: madeupemail@madeupdomain.com</p>
-        </div>
+
+        <div id="modalContainer"></div>
+    
     </main>
+
     <footer>
         <p>©️<span id="currentyear"></span> ❖ Garrett Stockwell ❖ Colorado, USA</p>
         <p id="lastModified"></p>
@@ -69,4 +84,3 @@
         </a>
     </footer>
 </body>
-</html>

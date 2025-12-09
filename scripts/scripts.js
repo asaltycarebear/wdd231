@@ -1,16 +1,16 @@
 document.addEventListener("DOMContentLoaded", () => {
-    const menuButton = document.querySelector("#menu"); /*# target id's*/
-    const navMenu = document.querySelector("#nav-menu");
+    const menuButton = document.querySelector(`#menu`); /*# target id's*/
+    const navMenu = document.querySelector(`#nav-menu`);
 
     menuButton.addEventListener("click", () => { /*=> is used in place of function ()*/
-        navMenu.classList.toggle("open");
+        navMenu.classList.toggle(`open`);
 
         /*Toggle*/ 
-        if (navMenu.classList.contains("open")) {
-            menuButton.textContent = "✖";
+        if (navMenu.classList.contains(`open`)) {
+            menuButton.textContent = `✖`;
         } 
         else {
-            menuButton.textContent = "☰";
+            menuButton.textContent = `☰`;
         }
     });
 });
@@ -140,7 +140,6 @@ document.querySelector("#cse").addEventListener("click", () => {
 const modal = document.querySelector('#course-details');
 const closeModal = document.querySelector('#closeModal');
 modal.showModal(); // display the modal dialog right away.
-// Usually you will want to wait for a user action to show the modal dialog
 closeModal.addEventListener('click', () => {
   modal.close();
 });

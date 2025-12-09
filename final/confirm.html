@@ -4,13 +4,24 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="author" content="Garrett Stockwell">
-    <!--Update--> <meta name="description" content="Final project site plan for WDD231">
-    <!--Update--> <title>WDD 231: Individual Project Site Plan</title>
+    
+    <!--Update--> <meta name="description" content="A template to copy for standard practices in WDD231">
+    <!--Update--> <title>WDD 231: Confirm Page - Garrett Stockwell</title>
+    
+    <!--Update (facebook)--><meta property="og:title" content="WDD 231: Confirm Page - Garrett Stockwell">
+    <!--Update (facebook)--><meta property="og:description" content="A template to copy for standard practices in WDD231. Created by Garrett Stockwell.">
+    <!--Update (facebook)--><meta property="og:image" content="https://asaltycarebear.github.io/wdd231/images/profile.jpg">
+    <!--Update (facebook)--><meta property="og:url" content="https://asaltycarebear.github.io/wdd231/">
     <!--Keep--><meta property="og:type" content="website">
+    
     <!--Update--> <link rel="stylesheet" href="styles/styles.css">
     <!--Update--> <link rel="stylesheet" href="styles/styles-large.css">
-    <!--Keep--> <script src="../scripts/getdates.js" defer></script>
+    <!--Update (page css goes here)--><link rel="stylesheet" href="styles/confirm.css" defer>
+    
+    <!--Keep--> <script src="scripts/getdates.js" defer></script>
     <!--Keep--> <script src="scripts/scripts.js" defer></script>
+    <!--Update (page script goes here)--> <script src="scripts/confirm.js" defer></script>
+
     <link rel="icon" href="images/favicon.ico">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -19,54 +30,25 @@
 <body>
     <header>
         <h1>Stockwell Inventory</h1>
-        <nav>
+        <button id="menu" class="hamburger" aria-label="Menu">☰</button>
+        <nav id="nav-menu">
             <ul>
                 <li><a href="index.html">Home</a></li>
                 <li><a href="receive.html">Receive</a></li>
                 <li><a href="move.html">Move</a></li>
-                <li><a href="pickfaceplan.html">Pick Face</a></li>
-                <li><a href="stocksummary.html">Summary</a></li>
+                <li><a href="pickface.html">Pick Face</a></li>
+                <li><a href="summary.html">Summary</a></li>
             </ul>
         </nav>
     </header>
-            
-    <main class="planmain">
-        <section>
-            <h2>Site Name:</h2>
-            <p>Stockwell Inventory</p>
-        </section>
 
-        <section>
-            <h2>Site Purpose:</h2>
-            <p>To showcase inventory tracking tools and show potential uses for using this tool in typical warehouse inventory management.</p>
-        </section>
+    <main>
+        <h1>Form Submitted Successfully</h1>
+        <p>Here is the information you submitted:</p>
 
-        <section>
-            <h2>Scenarios:</h2>
-            <p>What is the best way to Recive and Track my incoming inventory?</p>
-            <p>What is the best way to keep track of my inventory once I have recived inventory?</p>
-            <p>What is the best way to handle when inventory goes missing?</p>
-        </section>
+        <div id="confirmationBox" class="confirmation-container"></div>
 
-        <section>
-            <h2>Color Scheme:</h2>
-            <p>--primary-color: #FF8559;</p>
-            <p>--secondary-color: #24acff;</p>
-            <p>--accent1-color: white;</p>
-            <p>--accent2-color: #a3af9e;</p>
-            <p>--text-color: #0c1c00;</p>
-        </section>
-
-        <section>
-            <h2>Typography:</h2>
-            <p>Headers: "Quantico", sans-serif;</p>
-            <p>Body: "Oxanium", sans-serif;</p>
-        </section>
-
-        <section>
-            <h2>Wireframe</h2>
-            <img src="images/projectmainwireframe.webp" alt="Home page wireframe.">
-        </section>
+        <a href="receive.html">Receive Another</a>
     </main>
 
     <footer>
@@ -83,4 +65,3 @@
         </a>
     </footer>
 </body>
-</html>
