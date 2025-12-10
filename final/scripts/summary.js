@@ -31,7 +31,7 @@
 // });
 
 document.addEventListener("DOMContentLoaded", async () => {
-    const table = document.getElementById("stocksummary");
+    const tableBody = document.querySelector("#stocksummary tbody");
     const modalContainer = document.getElementById("modalContainer");
 
     // Load pallets from localStorage
@@ -44,11 +44,11 @@ document.addEventListener("DOMContentLoaded", async () => {
         td.textContent = "No pallets received yet.";
         td.style.textAlign = "center";
         row.appendChild(td);
-        table.appendChild(row);
+        tableBody.appendChild(row);
         return;
     }
 
-    // Table row creation
+    // Table row creation. need to add an input to know where to start with LPN creation OR change lpn creation to include date in number. Probably need to do this in receive.js
     pallets.forEach(pallet => {
         const row = document.createElement("tr");
 
@@ -57,20 +57,20 @@ document.addEventListener("DOMContentLoaded", async () => {
             <td>${pallet.sku}</td>
             <td>${pallet.location}</td>
             <td>${pallet.quantity}</td>
-            <td>${pallet.batchLot}</td>
-            <td>${pallet.productVersion}</td>
-            <td>${pallet.description}</td>
-            <td>${pallet.make}</td>
-            <td>${pallet.model}</td>
-            <td>${pallet.weight}</td>
-            <td>${pallet.length}</td>
-            <td>${pallet.width}</td>
-            <td>${pallet.height}</td>
-            <td>${pallet.costPerItem}</td>
-            <td>${pallet.salePrice}</td>
+            <td id="noMobile">${pallet.batchLot}</td>
+            <td id="noMobile">${pallet.productVersion}</td>
+            <td id="noMobile">${pallet.description}</td>
+            <td id="noMobile">${pallet.make}</td>
+            <td id="noMobile">${pallet.model}</td>
+            <td id="noMobile">${pallet.weight}</td>
+            <td id="noMobile">${pallet.length}</td>
+            <td id="noMobile">${pallet.width}</td>
+            <td id="noMobile">${pallet.height}</td>
+            <td id="noMobile">${pallet.costPerItem}</td>
+            <td id="noMobile">${pallet.salePrice}</td>
         `;
 
-        table.appendChild(row);
+        tableBody.appendChild(row);
 
         // Add click listener to LPN cell
         row.querySelector(".lpn-click").addEventListener("click", () => {
@@ -82,7 +82,6 @@ document.addEventListener("DOMContentLoaded", async () => {
     function openModal(pallet) {
         const totalWeight = (pallet.weight || 0) * (pallet.quantity || 0);
 
-        //Need to change the api to digital matrix not qr code. Its not complicated enough to need a qr code.
         modalContainer.innerHTML = `
             <div class="modal-overlay"></div>
 

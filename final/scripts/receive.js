@@ -93,7 +93,7 @@ receiveForm.addEventListener("submit", async function (event) {
         return;
     }
 
-    // Generate LPN with leading zeros
+    // Generate LPN with leading zeros. Needs to change to include date+3 digit number. Could be possible for more with larger customers. 
     let nextLpn = parseInt(localStorage.getItem("nextLpn")) || 1;
     const lpn = String(nextLpn).padStart(5, "0");
     localStorage.setItem("nextLpn", nextLpn + 1);

@@ -5,22 +5,22 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="author" content="Garrett Stockwell">
     
-    <!--Update--> <meta name="description" content="Confirmation page showing the details you submitted for inventory receiving or new item creation in the Stockwell Inventory system.">
-    <!--Update--> <title>Stockwell Inventory – Submission Confirmed</title>
+    <!--Update--> <meta name="description" content="A items list page for Stockwell Inventory snapshot. Showing all SKU's available to receive">
+    <!--Update--> <title>Stockwell Inventory: Items</title>
     
-    <!--Update (facebook)--><meta property="og:title" content="Stockwell Inventory – Submission Confirmed">
-    <!--Update (facebook)--><meta property="og:description" content="View the submitted details for your recent inventory receive or item creation form in the Stockwell Inventory system.">
+    <!--Update (facebook)--><meta property="og:title" content="Stockwell Inventory: Items">
+    <!--Update (facebook)--><meta property="og:description" content="A items list page for Stockwell Inventory snapshot. Showing all SKU's available to receive">
     <!--Update (facebook)--><meta property="og:image" content="https://asaltycarebear.github.io/wdd231/images/profile.jpg">
-    <!--Update (facebook)--><meta property="og:url" content="https://asaltycarebear.github.io/wdd231/confirm.html">
+    <!--Update (facebook)--><meta property="og:url" content="https://asaltycarebear.github.io/wdd231/index.html">
     <!--Keep--><meta property="og:type" content="website">
     
     <!--Update--> <link rel="stylesheet" href="styles/styles.css">
     <!--Update--> <link rel="stylesheet" href="styles/styles-large.css">
-    <!--Update (page css goes here)--><link rel="stylesheet" href="styles/confirm.css">
+    <!--Update (page css goes here)--><link rel="stylesheet" href="styles/items.css">
     
     <!--Keep--> <script src="scripts/getdates.js" defer></script>
     <!--Keep--> <script src="scripts/scripts.js" defer></script>
-    <!--Update (page script goes here)--> <script src="scripts/confirm.js" defer></script>
+    <!--Update (page script goes here)--> <script src="scripts/items.js" defer></script>
 
     <link rel="icon" href="images/favicon.ico">
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -28,7 +28,7 @@
     <link href="https://fonts.googleapis.com/css2?family=Oxanium:wght@200..800&family=Quantico&display=swap" rel="stylesheet">
 </head>
 <body>
-    <header>
+        <header>
         <h1>Stockwell Inventory</h1>
         <button id="menu" class="hamburger" aria-label="Menu">☰</button>
         <nav id="nav-menu">
@@ -42,16 +42,29 @@
             </ul>
         </nav>
     </header>
-
     <main>
-        <h1>Form Submitted Successfully</h1>
-        <p>Here is the information you submitted:</p>
-
-        <div id="confirmationBox" class="confirmation-container"></div>
-
-        <a href="receive.html">Receive Another</a>
-    </main>
-
+        <table id="itemsTable">
+            <thead>
+                <tr>
+                    <th>SKU</th>
+                    <th>Description</th>
+                    <th>Make</th>
+                    <th>Model</th>
+                    <th id="noMobile">Weight</th>
+                    <th id="noMobile">Length</th>
+                    <th id="noMobile">Width</th>
+                    <th id="noMobile">Height</th>
+                    <th>Batch Lot</th>
+                    <th>Product Version</th>
+                    <th id="noMobile">Cost Per Item</th>
+                    <th id="noMobile">Sale Price</th>
+                </tr>
+            </thead>
+            <tbody>
+                <!-- JavaScript will insert rows here -->
+            </tbody>
+        </table>
+</main>
     <footer>
         <p>©️<span id="currentyear"></span> ❖ Garrett Stockwell ❖ Colorado, USA</p>
         <p id="lastModified"></p>

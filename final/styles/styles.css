@@ -76,6 +76,52 @@ footer {
   font-size: 0.9rem;
 }
 
+/* Table css start */
+.table-container {
+    overflow-x: auto; /* enables horizontal scrolling */
+    width: 100%; /* container takes full width */
+    padding-top: 2rem;
+}
+
+#itemsTable,
+.stocksummary {
+    border-collapse: collapse;
+    width: max-content; /* allows table to expand beyond container */
+    table-layout: fixed;
+}
+
+#itemsTable th,
+#itemsTable td,
+.stocksummary th,
+.stocksummary td {
+    /* min-width: 10rem; */
+    /* ^^disable upon request^^*/
+    width: max-content;
+    border: 1px solid #000;
+    padding: 8px;
+    text-align: left;
+    overflow: auto;
+    resize: horizontal;
+}
+
+#itemsTable th,
+.stocksummary th {
+    background-color: rgb(185, 185, 185); /*I know its not a standard color, Needed for visability*/
+    text-align: center;
+}
+
+#itemsTable tr:nth-child(even),
+.stocksummary tr:nth-child(even) {
+    background-color: rgb(223, 223, 223); /*I know its not a standard color, Needed for visability*/
+}
+
+#itemsTable tr:hover,
+.stocksummary tr:hover {
+    background-color: var(--accent2-color);
+}
+/*Table css end*/
+
+
 
 
 @media (max-width: 600px) {
@@ -159,3 +205,4 @@ nav ul li a {
   display: none;
 }
 }
+

@@ -5,13 +5,13 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="author" content="Garrett Stockwell">
     
-    <!--Update--> <meta name="description" content="A template to copy for standard practices in WDD231">
-    <!--Update--> <title>WDD 231: Home Page - Garrett Stockwell</title>
-    
-    <!--Update (facebook)--><meta property="og:title" content="WDD 231: Home Page - Garrett Stockwell">
-    <!--Update (facebook)--><meta property="og:description" content="A template to copy for standard practices in WDD231. Created by Garrett Stockwell.">
+    <!--Update--> <meta name="description" content="View a complete summary of all inventory items, including SKU details, quantities, locations, specifications, and pricing.">
+    <!--Update--> <title>Stockwell Inventory – Summary</title>
+
+    <!--Update (facebook)--><meta property="og:title" content="Stockwell Inventory – Summary">
+    <!--Update (facebook)--><meta property="og:description" content="Access a detailed summary of all inventory items with SKU data, quantities, locations, batch lots, dimensions, and pricing.">
     <!--Update (facebook)--><meta property="og:image" content="https://asaltycarebear.github.io/wdd231/images/profile.jpg">
-    <!--Update (facebook)--><meta property="og:url" content="https://asaltycarebear.github.io/wdd231/">
+    <!--Update (facebook)--><meta property="og:url" content="https://asaltycarebear.github.io/wdd231/summary.html">
     <!--Keep--><meta property="og:type" content="website">
     
     <!--Update--> <link rel="stylesheet" href="styles/styles.css">
@@ -35,8 +35,9 @@
             <ul>
                 <li><a href="index.html">Home</a></li>
                 <li><a href="receive.html">Receive</a></li>
-                <li><a href="move.html">Move</a></li>
-                <li><a href="pickface.html">Pick Face</a></li>
+                <li><a href="items.html">Items</a></li>
+                <!-- <li><a href="move.html">Move</a></li> -->
+                <!-- <li><a href="pickface.html">Pick Face</a></li> -->
                 <li><a href="summary.html">Summary</a></li>
             </ul>
         </nav>
@@ -45,24 +46,28 @@
     <main>
         <div class="table-container">
             <table class="stocksummary" id="stocksummary">
-                <tr>
-                    <th class="lpn">LPN</th> <!--LPN is short for Licence Plate Number-->
-                    <th class="sku">SKU</th>
-                    <th class="location">Location</th>
-                    <th class="quantity">quantity</th>
-                    <th class="Batch Lot">Batch Lot</th>
-                    <th class="product-version">Product Version</th>
-                    <th class="description">Description</th>
-                    <th class="make">Make</th>
-                    <th class="model">Model</th>
-                    <th class="weight">Weight</th>
-                    <th class="length">Length</th>
-                    <th class="width">Width</th>
-                    <th class="height">Height</th>
-                    <th class="cost-per-item">Cost per Item</th>
-                    <th class="item-sale-price">Item Sale Price</th>
-                </tr>
-                <!-- table rows here -->
+                <thead>
+                    <tr>
+                        <th class="lpn">LPN</th> <!--LPN is short for Licence Plate Number-->
+                        <th class="sku">SKU</th>
+                        <th class="location">Location</th>
+                        <th class="quantity">quantity</th>
+                        <th class="Batch Lot" id="noMobile">Batch Lot</th>
+                        <th class="product-version" id="noMobile">Product Version</th>
+                        <th class="description" id="noMobile">Description</th>
+                        <th class="make" id="noMobile">Make</th>
+                        <th class="model" id="noMobile">Model</th>
+                        <th class="weight" id="noMobile">Weight</th>
+                        <th class="length" id="noMobile">Length</th>
+                        <th class="width" id="noMobile">Width</th>
+                        <th class="height" id="noMobile">Height</th>
+                        <th class="cost-per-item" id="noMobile">Cost per Item</th>
+                        <th class="item-sale-price" id="noMobile">Item Sale Price</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <!-- table rows here -->
+                 </tbody>
             </table>
         </div>
 
