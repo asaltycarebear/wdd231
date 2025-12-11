@@ -6,20 +6,20 @@ font-weight: bold;
 
 @media (max-width: 600px) {
 
-.largeHero {
-  display: none;
-}
+  .largehero {
+    display: none;
+  }
 
-.heroMobile{
-  width: 100%;
-  height: auto;
-}
+  .heromobile{
+    width: 100%;
+    height: auto;
+  }
 
-.about {
-  margin: 1rem;
-  padding: 1rem;
-  background-color: rgba(255, 133, 89, 0.8);
-}
+  .about {
+    margin: 1rem;
+    padding: 1rem;
+    background-color: rgba(255, 133, 89, 0.8);
+  }
 }
 
 @media screen and (min-width: 600px) {
@@ -43,10 +43,10 @@ font-weight: bold;
     display: none;
   }
 
-.hero h2 {
-    white-space: nowrap;
-    margin: 0;
-}
+  .hero h2 {
+      white-space: nowrap;
+      margin: 0;
+  }
 
   .hero h2 {
     margin: 0;
