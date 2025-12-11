@@ -26,17 +26,17 @@ document.addEventListener("DOMContentLoaded", async () => {
             <td>${pallet.sku}</td>
             <td>${pallet.location}</td>
             <td>${pallet.quantity}</td>
-            <td id="noMobile">${pallet.batchLot}</td>
-            <td id="noMobile">${pallet.productVersion}</td>
-            <td id="noMobile">${pallet.description}</td>
-            <td id="noMobile">${pallet.make}</td>
-            <td id="noMobile">${pallet.model}</td>
-            <td id="noMobile">${pallet.weight}</td>
-            <td id="noMobile">${pallet.length}</td>
-            <td id="noMobile">${pallet.width}</td>
-            <td id="noMobile">${pallet.height}</td>
-            <td id="noMobile">${pallet.costPerItem}</td>
-            <td id="noMobile">${pallet.salePrice}</td>
+            <td class="noMobile">${pallet.batchLot}</td>
+            <td class="noMobile">${pallet.productVersion}</td>
+            <td class="noMobile">${pallet.description}</td>
+            <td class="noMobile">${pallet.make}</td>
+            <td class="noMobile">${pallet.model}</td>
+            <td class="noMobile">${pallet.weight}</td>
+            <td class="noMobile">${pallet.length}</td>
+            <td class="noMobile">${pallet.width}</td>
+            <td class="noMobile">${pallet.height}</td>
+            <td class="noMobile">${pallet.costPerItem}</td>
+            <td class="noMobile">${pallet.salePrice}</td>
         `;
 
         tableBody.appendChild(row);

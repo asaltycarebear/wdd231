@@ -209,7 +209,7 @@ nav ul li a {
   display: none;
 }
 
-#noMobile {
+.noMobile {
   display: none;
 }
 }

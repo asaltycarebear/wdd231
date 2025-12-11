@@ -15,14 +15,14 @@ document.addEventListener("DOMContentLoaded", () => {
                     <td>${item.description}</td>
                     <td>${item.make}</td>
                     <td>${item.model}</td>
-                    <td id="noMobile">${item.weight}</td>
-                    <td id="noMobile">${item.length}</td>
-                    <td id="noMobile">${item.width}</td>
-                    <td id="noMobile">${item.height}</td>
+                    <td class="noMobile">${item.weight}</td>
+                    <td class="noMobile">${item.length}</td>
+                    <td class="noMobile">${item.width}</td>
+                    <td class="noMobile">${item.height}</td>
                     <td>${item.batchLot}</td>
                     <td>${item.productVersion}</td>
-                    <td id="noMobile">${item.costPerItem}</td>
-                    <td id="noMobile">${item.salePrice}</td>
+                    <td class="noMobile">${item.costPerItem}</td>
+                    <td class="noMobile">${item.salePrice}</td>
                 `;
 
                 tableBody.appendChild(row);
