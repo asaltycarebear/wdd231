@@ -1,4 +1,4 @@
-    // ***Buttons for toggling form***
+// ***Buttons for toggling form***
 
 const showReceiveBtn = document.getElementById("showReceive");
 const showNewItemBtn = document.getElementById("showNewItem");
@@ -24,7 +24,7 @@ showNewItemBtn.addEventListener("click", () => {
     showReceiveBtn.classList.remove("active");
 });
 
-    // ***Create item in local storage. Need backend server for actual aplication***
+// ***Create item in local storage. Need backend server for actual application***
 
 newItemForm.addEventListener("submit", function (event) {
     event.preventDefault();
@@ -39,8 +39,8 @@ newItemForm.addEventListener("submit", function (event) {
         length: parseFloat(document.getElementById("newLength").value) || 0,
         width: parseFloat(document.getElementById("newWidth").value) || 0,
         height: parseFloat(document.getElementById("newHeight").value) || 0,
-        batchLot: document.getElementById("newBatchLot").value.trim(),
-        productVersion: parseInt(document.getElementById("newProductVersion").value) || 0,
+        batchLot: document.getElementById("newItemBatchLot").value.trim(),
+        productVersion: parseInt(document.getElementById("newItemProductVersion").value) || 0,
         costPerItem: parseFloat(document.getElementById("newCostPerItem").value) || 0,
         salePrice: parseFloat(document.getElementById("newItemSalePrice").value) || 0
     };
@@ -54,6 +54,11 @@ newItemForm.addEventListener("submit", function (event) {
     // Save back to localStorage
     localStorage.setItem("items", JSON.stringify(items));
 
+    // Clear form if checkbox is checked
+    if (document.getElementById("newItemClearAfterSubmit").checked) {
+        newItemForm.reset();
+    }
+
     // Build GET query string for confirmation page
     const query = new URLSearchParams(item).toString();
 
@@ -61,19 +66,17 @@ newItemForm.addEventListener("submit", function (event) {
     window.location.href = "confirm.html?" + query;
 });
 
+// ***LPN receiving***
 
-
-    // ***LPN receiving***
-
-//receiveForm submit handler
+// Receive Form submit handler
 receiveForm.addEventListener("submit", async function (event) {
     event.preventDefault();
 
     // Get form values
-    const sku = document.getElementById("sku").value.trim();
-    const quantity = parseInt(document.getElementById("quantity").value) || 0;
-    const batchLot = document.getElementById("newBatchLot").value.trim();
-    const version = parseInt(document.getElementById("newProductVersion").value) || 0;
+    const sku = document.getElementById("receiveSku").value.trim();
+    const quantity = parseInt(document.getElementById("receiveQuantity").value) || 0;
+    const batchLot = document.getElementById("receiveBatchLot").value.trim();
+    const version = parseInt(document.getElementById("receiveProductVersion").value) || 0;
 
     // Load items.json
     let items = [];
@@ -93,18 +96,14 @@ receiveForm.addEventListener("submit", async function (event) {
         return;
     }
 
-    // Generate LPN 
-    // Get today's date as MMDDYYYY. This ensures there will not be duplicates as long as you only clear table once a day. With a dedicated server, this should be fixed. 
+    // Generate LPN: MMDDYYYY + 3-digit sequence
     const today = new Date();
     const mm = String(today.getMonth() + 1).padStart(2, "0");
     const dd = String(today.getDate()).padStart(2, "0");
     const yyyy = today.getFullYear();
     const datePrefix = `${mm}${dd}${yyyy}`;
 
-    // Get the last sequence for today from localStorage
     let lastSeq = JSON.parse(localStorage.getItem("lpnSequence")) || { date: "", seq: 0 };
-
-    // If last saved date is today, increment sequence, else reset to 1
     if (lastSeq.date === datePrefix) {
         lastSeq.seq += 1;
     } else {
@@ -112,14 +111,8 @@ receiveForm.addEventListener("submit", async function (event) {
         lastSeq.seq = 1;
     }
 
-    // Build LPN: MMDDYYYY + 3-digit sequence
     const lpn = `${datePrefix}${String(lastSeq.seq).padStart(3, "0")}`;
-
-    // Save updated sequence to localStorage
     localStorage.setItem("lpnSequence", JSON.stringify(lastSeq));
-
-    console.log(lpn);
-    //end LPN generation
 
     // Build pallet object (include matched item fields for display on summary)
     const newPallet = {
@@ -148,7 +141,7 @@ receiveForm.addEventListener("submit", async function (event) {
         // Clear form if checkbox checked HOWEVER with a confirmation page this become unnessesary. I want to leave it as an option. 
         // In the future I would rather have a whole list of recent received lpn's to be shown after the session is done, 
         // but for this assignment I am using a confirmation page.
-    if (document.getElementById("clearAfterSubmit").checked) {
+    if (document.getElementById("receiveClearAfterSubmit").checked) {
         receiveForm.reset();
     }
 
@@ -161,11 +154,8 @@ receiveForm.addEventListener("submit", async function (event) {
         productVersion: version
     };
     const query = new URLSearchParams(formData).toString();
-
-    // Redirect to confirmation page (confirm.html?lpn=...&sku=... )
     window.location.href = "confirm.html?" + query;
 });
-
 
 
 

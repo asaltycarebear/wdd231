@@ -43,90 +43,93 @@
         </nav>
     </header>
     
-    <main>
+<main>
 
-        <div class="form-toggle">
-            <button id="showReceive">Receive Item</button>
-            <button id="showNewItem">New Item</button>
-        </div>
+    <div class="form-toggle">
+        <button id="showReceive">Receive Item</button>
+        <button id="showNewItem">New Item</button>
+    </div>
 
-        <form class="receiveForm" id="receiveForm" method="get" action="confirm.html">
-            <h2>Receive new pallet</h2>
+    <!-- Receive Form -->
+    <form class="receiveForm" id="receiveForm" method="get" action="confirm.html">
+        <h2>Receive new pallet</h2>
 
-            <label for="sku">SKU:</label>
-            <input type="text" id="sku" name="sku" placeholder="Enter SKU">
+        <label for="receiveSku">SKU:</label>
+        <input type="text" id="receiveSku" name="sku" placeholder="Enter SKU">
 
-            <label for="Quantity">Quantity:</label>
-            <input type="text" id="quantity" name="quantity" placeholder="Enter Quantity">   
+        <label for="receiveQuantity">Quantity:</label>
+        <input type="text" id="receiveQuantity" name="quantity" placeholder="Enter Quantity">   
 
-            <label for="newBatchLot">Batch Lot:</label>
-            <input type="text" id="newBatchLot" name="batchLot" placeholder="Batch Lot">
+        <label for="receiveBatchLot">Batch Lot:</label>
+        <input type="text" id="receiveBatchLot" name="batchLot" placeholder="Batch Lot">
 
-            <label for="newProductVersion">Product Version:</label>
-            <input type="number" id="newProductVersion" name="productVersion" placeholder="Version Number" min="0" step="1">
+        <label for="receiveProductVersion">Product Version:</label>
+        <input type="number" id="receiveProductVersion" name="productVersion" placeholder="Version Number" min="0" step="1">
 
-            <hr class="soft-divider">
+        <hr class="soft-divider">
 
-            <label for="checkbox">Clear Form on Submit:
-                <input type="checkbox" id="clearAfterSubmit">
-            </label>
+        <label for="receiveClearAfterSubmit">Clear Form on Submit:
+            <input type="checkbox" id="receiveClearAfterSubmit">
+        </label>
 
-            <input type="submit" value="Submit Form">
-        </form>
+        <input type="submit" value="Submit Form">
+    </form>
 
-        <form id="newItemForm" class="hidden" method="get" action="confirm.html">
-            <h2>Add New Item</h2>
+    <!-- New Item Form -->
+    <form id="newItemForm" class="hidden" method="get" action="confirm.html">
+        <h2>Add New Item</h2>
 
-            <label for="newSku">SKU:</label>
-            <input type="text" id="newSku" name="sku" placeholder="Enter SKU">
+        <label for="newSku">SKU:</label>
+        <input type="text" id="newSku" name="sku" placeholder="Enter SKU">
 
-            <label for="newDescription">Description:</label>
-            <input type="text" id="newDescription" name="description" placeholder="Description">
+        <label for="newDescription">Description:</label>
+        <input type="text" id="newDescription" name="description" placeholder="Description">
 
-            <label for="newMake">Make:</label>
-            <input type="text" id="newMake" name="make" placeholder="Enter Make">
+        <label for="newMake">Make:</label>
+        <input type="text" id="newMake" name="make" placeholder="Enter Make">
 
-            <label for="newModel">Model:</label>
-            <input type="text" id="newModel" name="model" placeholder="Enter Model">
+        <label for="newModel">Model:</label>
+        <input type="text" id="newModel" name="model" placeholder="Enter Model">
 
-                <hr class="soft-divider">
+        <hr class="soft-divider">
 
-            <label for="newWeight">Weight:</label>
-            <input type="number" id="newWeight" name="weight" placeholder="Weight" min="0" step="0.01">
+        <label for="newWeight">Weight:</label>
+        <input type="number" id="newWeight" name="weight" placeholder="Weight" min="0" step="0.01">
 
-            <label for="newLength">Length:</label>
-            <input type="number" id="newLength" name="length" placeholder="Length" min="0" step="0.01">
+        <label for="newLength">Length:</label>
+        <input type="number" id="newLength" name="length" placeholder="Length" min="0" step="0.01">
 
-            <label for="newWidth">Width:</label>
-            <input type="number" id="newWidth" name="width" placeholder="Width" min="0" step="0.01">
+        <label for="newWidth">Width:</label>
+        <input type="number" id="newWidth" name="width" placeholder="Width" min="0" step="0.01">
 
-            <label for="newHeight">Height:</label>
-            <input type="number" id="newHeight" name="height" placeholder="Height" min="0" step="0.01">
+        <label for="newHeight">Height:</label>
+        <input type="number" id="newHeight" name="height" placeholder="Height" min="0" step="0.01">
 
-                <hr class="soft-divider">
+        <hr class="soft-divider">
 
-            <label for="newBatchLot">Batch Lot:</label>
-            <input type="text" id="newBatchLot" name="batchLot" placeholder="Batch Lot">
+        <label for="newItemBatchLot">Batch Lot:</label>
+        <input type="text" id="newItemBatchLot" name="batchLot" placeholder="Batch Lot">
 
-            <label for="newProductVersion">Product Version:</label>
-            <input type="number" id="newProductVersion" name="productVersion" placeholder="Version Number" min="0" step="1">
+        <label for="newItemProductVersion">Product Version:</label>
+        <input type="number" id="newItemProductVersion" name="productVersion" placeholder="Version Number" min="0" step="1">
 
-                <hr class="soft-divider">
+        <hr class="soft-divider">
 
-            <label for="newCostPerItem">Cost per Item:</label>
-            <input type="number" id="newCostPerItem" name="costPerItem" placeholder="Cost" min="0" step="0.01">
+        <label for="newCostPerItem">Cost per Item:</label>
+        <input type="number" id="newCostPerItem" name="costPerItem" placeholder="Cost" min="0" step="0.01">
 
-            <label for="newItemSaleCost">Item Sale Price:</label>
-            <input type="number" id="newItemSalePrice" name="itemSalePricet" placeholder="Sale Price" min="0" step="0.01">
+        <label for="newItemSalePrice">Item Sale Price:</label>
+        <input type="number" id="newItemSalePrice" name="itemSalePrice" placeholder="Sale Price" min="0" step="0.01">
 
-            <label for="checkbox">Clear Form on Submit:
-                <input type="checkbox" id="clearAfterSubmit">
-            </label>
-            
-            <input type="submit" value="Create Item">
-            
-        </form>
-    </main>
+        <label for="newItemClearAfterSubmit">Clear Form on Submit:
+            <input type="checkbox" id="newItemClearAfterSubmit">
+        </label>
+        
+        <input type="submit" value="Create Item">
+        
+    </form>
+</main>
+
 
     <footer>
         <p>©️<span id="currentyear"></span> ❖ Garrett Stockwell ❖ Colorado, USA</p>
