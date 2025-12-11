@@ -69,7 +69,7 @@ newItemForm.addEventListener("submit", function (event) {
 // ***LPN receiving***
 
 // Receive Form submit handler
-receiveForm.addEventListener("submit", async function (event) {
+receiveForm.addEventListener("submit", async function (event) { // <<<<<< async decleration
     event.preventDefault();
 
     // Get form values

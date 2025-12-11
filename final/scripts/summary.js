@@ -17,7 +17,7 @@ document.addEventListener("DOMContentLoaded", async () => {
         return;
     }
 
-    // Table row creation. need to add an input to know where to start with LPN creation OR change lpn creation to include date in number. Probably need to do this in receive.js
+    // Table row creation. LPN creating happen in receive.js and uses todays date + a sequence
     pallets.forEach(pallet => {
         const row = document.createElement("tr");
 
@@ -47,7 +47,7 @@ document.addEventListener("DOMContentLoaded", async () => {
         });
     });
 
-    // Modal builder
+    // Modal builder (This is where the API is used)
     function openModal(pallet) {
         const totalWeight = (pallet.weight || 0) * (pallet.quantity || 0);
 
