@@ -1,39 +1,8 @@
-    //Load items code here, but will need to create a different page. Will use later
 
-// document.addEventListener("DOMContentLoaded", () => {
-//     const table = document.getElementById("stocksummary");
-
-//     // Load saved items
-//     const items = JSON.parse(localStorage.getItem("items")) || [];
-
-//     items.forEach(item => {
-//         const row = document.createElement("tr");
-
-//         row.innerHTML = `
-//             <td>${item.sku}</td>
-//             <td>${item.location || ""}</td>
-//             <td>${item.quantity || ""}</td>
-//             <td>${item.batchLot || ""}</td>
-//             <td>${item.productVersion || ""}</td>
-//             <td>${item.description || ""}</td>
-//             <td>${item.make || ""}</td>
-//             <td>${item.model || ""}</td>
-//             <td>${item.weight || ""}</td>
-//             <td>${item.length || ""}</td>
-//             <td>${item.width || ""}</td>
-//             <td>${item.height || ""}</td>
-//             <td>${item.costPerItem || ""}</td>
-//             <td>${item.salePrice || ""}</td>
-//         `;
-
-//         table.appendChild(row);
-//     });
-// });
 
 document.addEventListener("DOMContentLoaded", async () => {
     const tableBody = document.querySelector("#stocksummary tbody");
     const modalContainer = document.getElementById("modalContainer");
-
     // Load pallets from localStorage
     const pallets = JSON.parse(localStorage.getItem("pallets")) || [];
 
@@ -108,6 +77,76 @@ document.addEventListener("DOMContentLoaded", async () => {
 
     function closeModal() {
         modalContainer.innerHTML = "";
+    }
+});
+
+// Convert table to CSV
+function tableToCSV(tableId) {
+    const table = document.getElementById(tableId);
+    let csv = [];
+
+    for (let row of table.rows) {
+        let cells = Array.from(row.cells).map(cell => `${cell.textContent.trim()}`);
+        csv.push(cells.join(`,`));
+    }
+    return csv.join(`\n`);
+}
+
+// Export CSV function
+function exportTable(tableId, clearAfter) {
+    const csvData = tableToCSV(tableId);
+
+    // Temp download link
+    const blob = new Blob([csvData], { type: `text/csv` });
+    const url = URL.createObjectURL(blob);
+    const a = document.createElement(`a`);
+    a.href = url;
+    a.download = `stock_summary.csv`;
+    document.body.appendChild(a);
+    a.click();
+    document.body.removeChild(a);
+
+    // Clear table and storage when checked
+    if (clearAfter) {
+        localStorage.removeItem(`pallets`);
+        const table = document.getElementById(tableId);
+        while (table.rows.length > 1) { // KEEP HEADER ROW!!!!
+            table.deleteRow(1);
+        }
+    }
+
+    // Always uncheck the box, only note out on customer request. Very scary. To be fair, if you don't un
+    const checkbox = document.getElementById(`clearAfterExport`);
+    if (checkbox) checkbox.checked = false;
+}
+
+
+// Clear Table
+function clearTable(tableId) {
+    localStorage.removeItem(`pallets`);
+    const table = document.getElementById(tableId);
+    while (table.rows.length > 1) { // KEEP HEADER ROW!!!!
+        table.deleteRow(1);
+    }
+}
+
+// Event listener for both export and clearing
+document.addEventListener("DOMContentLoaded", () => {
+    const exportButton = document.getElementById(`exportCSV`);
+    if (exportButton) {
+        exportButton.addEventListener("click", () => {
+            const clearAfter = document.getElementById(`clearAfterExport`).checked;
+            exportTable(`stocksummary`, clearAfter);
+        });
+    }
+
+    const clearButton = document.getElementById(`clearTable`); // Need to learn how to center this popup
+    if (clearButton) {
+        clearButton.addEventListener("click", () => {
+            if (confirm(`Are you sure you want to clear the table?\n!!!!!!!!!!!!\nThis action cannot be undone.`)) {
+                clearTable(`stocksummary`);
+            }
+        });
     }
 });
 

@@ -65,7 +65,7 @@ newItemForm.addEventListener("submit", function (event) {
 
     // ***LPN receiving***
 
-// SINGLE, CORRECT receiveForm submit handler
+//receiveForm submit handler
 receiveForm.addEventListener("submit", async function (event) {
     event.preventDefault();
 
@@ -93,10 +93,33 @@ receiveForm.addEventListener("submit", async function (event) {
         return;
     }
 
-    // Generate LPN with leading zeros. Needs to change to include date+3 digit number. Could be possible for more with larger customers. 
-    let nextLpn = parseInt(localStorage.getItem("nextLpn")) || 1;
-    const lpn = String(nextLpn).padStart(5, "0");
-    localStorage.setItem("nextLpn", nextLpn + 1);
+    // Generate LPN 
+    // Get today's date as MMDDYYYY. This ensures there will not be duplicates as long as you only clear table once a day. With a dedicated server, this should be fixed. 
+    const today = new Date();
+    const mm = String(today.getMonth() + 1).padStart(2, "0");
+    const dd = String(today.getDate()).padStart(2, "0");
+    const yyyy = today.getFullYear();
+    const datePrefix = `${mm}${dd}${yyyy}`;
+
+    // Get the last sequence for today from localStorage
+    let lastSeq = JSON.parse(localStorage.getItem("lpnSequence")) || { date: "", seq: 0 };
+
+    // If last saved date is today, increment sequence, else reset to 1
+    if (lastSeq.date === datePrefix) {
+        lastSeq.seq += 1;
+    } else {
+        lastSeq.date = datePrefix;
+        lastSeq.seq = 1;
+    }
+
+    // Build LPN: MMDDYYYY + 3-digit sequence
+    const lpn = `${datePrefix}${String(lastSeq.seq).padStart(3, "0")}`;
+
+    // Save updated sequence to localStorage
+    localStorage.setItem("lpnSequence", JSON.stringify(lastSeq));
+
+    console.log(lpn);
+    //end LPN generation
 
     // Build pallet object (include matched item fields for display on summary)
     const newPallet = {
