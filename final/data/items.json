@@ -312,51 +312,6 @@
         "productVersion": 1,
         "costPerItem": 5.0,
         "salePrice": 8.99
-    },
-
-    {
-        "sku": "0008.1",
-        "description": "Small Orange Shirt",
-        "make": "Factory",
-        "model": "S1",
-        "weight": 0.5,
-        "length": 25,
-        "width": 20,
-        "height": 0.2,
-        "batchLot": "7",
-        "productVersion": 1,
-        "costPerItem": 5.0,
-        "salePrice": 8.99
-    },
-
-    {
-        "sku": "0008.2",
-        "description": "Medium Orange Shirt",
-        "make": "Factory",
-        "model": "M1",
-        "weight": 0.55,
-        "length": 26,
-        "width": 20.5,
-        "height": 0.2,
-        "batchLot": "7",
-        "productVersion": 1,
-        "costPerItem": 5.0,
-        "salePrice": 8.99
-    },
-
-    {
-        "sku": "0008.3",
-        "description": "Large Orange Shirt",
-        "make": "Factory",
-        "model": "L1",
-        "weight": 0.6,
-        "length": 27,
-        "width": 21,
-        "height": 0.2,
-        "batchLot": "7",
-        "productVersion": 1,
-        "costPerItem": 5.0,
-        "salePrice": 8.99
     }
 
 ]
